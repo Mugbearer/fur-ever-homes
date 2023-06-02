@@ -40,13 +40,20 @@ footer {
     
 }
 
-.logo-grp h3 {
+.website-name {
     color: #FFD4D4;
+    font-weight: 600;
+    font-size: 30px;
 }
 
-.nav-links > a{
-    display:block;
+.login{
+    font-size: 20px;
+}
 
+.nav-links > a {
+    display: block;
+    font-weight: 500;
+    font-size: 20px;
 }
 
 header > *{
@@ -64,8 +71,10 @@ footer > div{
 }
 
 .upper-footer {
+    display: flex;
     height: 88.8%;
     background: #FFFFEF;
+    padding: 66px 138px 72px 141px;
 }
 
 .lower-footer {
@@ -75,4 +84,15 @@ footer > div{
     height: 11.2%;
     color: #CF8E8E;
     font-size: 0.8rem;
+}
+
+.footer-group{
+    
+}
+
+.first-half {
+}
+
+.second-half{
+
 }
