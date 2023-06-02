@@ -1,0 +1,64 @@
+* {
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+body {
+    min-height: 100vh;
+    background: #FFFFFB;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    display:flex;
+    justify-content:space-between;
+    padding: 2.5em 7.5em;
+}
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;   
+}
+.logo-grp{
+    display:flex;
+    gap: 1em;
+    
+}
+.logo-grp h3 {
+    color: #FFD4D4;
+}
+.nav-links > a{
+    display:block;
+
+}
+header > *{
+    align-items:center;
+
+}
+a, a:hover, a:focus, a:visited{
+    text-decoration:none;
+    color:#000;
+}
+
+main {
+    min-height:70vh;
+    
+
+}
+footer{
+    display:flex;
+    flex-direction:column;
+    text-align:center;
+    height: 30vh;
+}
+footer > div{
+    width:100%;
+}
+.upper-footer {
+    height: 85%;
+    background: #FFFFEF;
+}
+.lower-footer {
+    height: 15%;
+    background: #FFE8E8;
+    color: #CF8E8E;
+}
