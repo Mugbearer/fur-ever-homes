@@ -68,12 +68,19 @@ a, a:hover, a:focus, a:visited {
     color: #393E46;
 }
 
+
+
 footer > div{
     width:100%;
 }
 
+footer > *{
+    align-content:center;
+}
+
 .upper-footer {
     display: flex;
+    justify-content:space-between;
     height: 88.8%;
     background: #FFFFEF;
     padding: 66px 138px 72px 141px;
@@ -213,4 +220,25 @@ input, textarea {
 }
 .register-link a {
     text-decoration-line: underline;
+}
+
+.vl{
+    border-left:3px solid grey;
+    height: 200px;
+
+}
+
+.slogo{
+    display:flex;
+    justify-content:space-between;
+    gap:1em;
+    margin-top:5vh;
+    height:30px
+}
+
+.contact {
+    display: block;
+    align-content:center;
+    white-space: pre-wrap;
+    margin-top: 5vh;
 }
