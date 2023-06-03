@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(180deg, #FFFCFA 41.11%, #FFE8E8 100%);
+    min-height: 100vh;
+    color:#393E46;
+}
+.container .side-bar{
+    position: fixed;
+    top:0;
+    left:0;
+    height: 100vh;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 25px;
+}
+.logo-title{
+    display: flex;
+    align-items: center;
+    color: #FFE8E8;
+    font-size: 15px;
+}
+.side-bar ul{
+    margin-top: 35px;
+}
+.side-bar ul li a{
+    line-height: 50px;
+    color:#393E46;
+    padding: 2px;
+    display: block;
+    border-radius: 8px;
+    font-size: 12px;
+
+}
+.side-bar ul li a:hover{
+    background-color: #FFF8F8;
+}
+.side-bar ul li a i{
+    margin-right: 20px;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.main{
+    margin-left: 250px;
+}
+.nav-bar ul{
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.nav-bar ul li a{
+    display: block;
+    color:#393E46;
+    border-radius: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 15px;
+    line-height: 40px;
+    
+}
+.nav-bar ul li a:hover{
+background-color: #FFE8E8;
+}
+.login-link{
+    display: flex;
+    align-items: center;
+}
+.main-items{
+    margin-top: 30px;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+}
+.card{
+    background: white;
+    width: 300px;
+    margin: 10px;
+    border-radius: 8px;
+    
+}
+.card-img{
+    height: 80%;
+    margin-bottom: 15px;
+    background-size: cover;
+    border-radius: 8px 8px 0 0;
+}
+.car-url{
+    background-image: url(corgi.png);
+}
+.card h3{
+    padding: 10px; 
+}
+.card p{
+    font-size: 11px;
+    padding: 10px; 
+}
+.card a{
+    background-color: #FF7171;
+    color:#FEFEF5;
+    border-radius: 8px;
+    display: block;
+    margin: 0 10px 20px 10px;
+    line-height: 40px;
+    font-size: 14px;
+    text-align: center;
+}
+.card a:hover{
+    background-color: #FF5A5A;
+}
