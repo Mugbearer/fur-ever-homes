@@ -253,3 +253,58 @@ input, textarea {
     justify-content:center;
     margin-left: 4vh;
 }
+
+.AU-Body {
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+ 
+
+}
+.AU-image {
+    height: 100%;
+    width: 100%;
+
+}
+.AU-content {
+    margin-left: 4vh;
+    white-space:pre-wrap;
+
+}
+
+.sign-up-form {
+    position:relative;
+    width: 701px;
+    height: 520px;  
+    background: #FFFFFF;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 21px 25px 32px 0;
+}
+
+.sign-up-form h1{
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 80px;
+}
+
+.sign-up-form img {
+    float: right;
+}
+
+.sign-up-form h1 span {
+    color: #CF8E8E;
+}
+
+.sign-up-form1{
+    display: flex;
+    justify-content:space-between;
+    align-content:center;  
+}
+.sign-up-fn{
+    display:flex;
+    
+}

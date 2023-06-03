@@ -2,3 +2,30 @@
 @model fur_ever_homes.Pages.SignUpModel
 @{
 }
+<div class="form-container">
+    <form method="post" class="sign-up-form">
+        <img src="~/images/close-icon.svg"/>
+        <div></div>
+        <h1>Be a<span> fur</span>-parent today.</h1>
+        <div class="form-group">
+            <div class="sign-up-form1">
+                <div class="sign-up-fn">
+                    <input placeholder="* first name"/>
+                    <span class="text-validation">Error message</span>
+                </div>
+                <div class="sign-up-ln">
+                    <input placeholder="* last name" />
+                    <span class="text-validation">Error message</span>
+                </div>
+            </div>
+            <button class="login-button">
+                <div>
+                    LOGIN
+                </div>
+            </button>
+            <div class="register-link">
+                Don’t have an account? <a asp-page="SignUp">Register here.</a>
+            </div>
+        </div>
+    </form>
+</div>
