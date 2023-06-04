@@ -12,7 +12,6 @@ body{
     color:#393E46;
 }
 .container .side-bar{
-    position: fixed;
     top:0;
     left:0;
     height: 100vh;
@@ -20,15 +19,16 @@ body{
     box-sizing: border-box;
     border-right: 1px solid rgba(0, 0, 0, 0.1);
     padding: 25px;
+    position: fixed;
 }
 .logo-title{
     display: flex;
     align-items: center;
-    color: #FFE8E8;
-    font-size: 15px;
+    color: #FFD4D4;
+    font-size: 20px;
 }
 .side-bar ul{
-    margin-top: 35px;
+    margin-top: 10px;
 }
 .side-bar ul li a{
     line-height: 50px;
@@ -36,16 +36,20 @@ body{
     padding: 2px;
     display: block;
     border-radius: 8px;
-    font-size: 12px;
-
+    font-size: 13px;
+    margin-bottom: 1vh;
 }
 .side-bar ul li a:hover{
     background-color: #FFF8F8;
 }
-.side-bar ul li a i{
+.side-bar ul li a img{
     margin-right: 20px;
     margin-left: 5px;
-    font-size: 16px;
+    width:18px;
+}
+.side-bar-item-container{
+    display: flex;
+    align-items: center;
 }
 .main{
     margin-left: 250px;
@@ -81,7 +85,8 @@ background-color: #FFE8E8;
     justify-content: center;
     display: grid;
     grid-template-columns: repeat(3, 40vh);
-    gap:3vh;
+    gap:2vh;
+    
 }
 .card{
     background: #FFFFFF;
@@ -91,7 +96,7 @@ background-color: #FFE8E8;
     
 }
 .card-img{
-    height: 15vh;
+    height: 20vh;
     margin-bottom: 1vh;
     margin: 1.5vh;
     background-size: cover;
@@ -117,6 +122,9 @@ background-color: #FFE8E8;
     background-color: #FF7171;
     margin: 2vh;
 }
+.card a:hover{
+    background-color: #FF5A5A;
+}
 .btn{
     display: flex;
 }
@@ -128,18 +136,43 @@ background-color: #FFE8E8;
 }
 .btn #edit-btn{
     background-color: #CDE990;
-    width: 14vw;
+    width: 13vw;
 }
 .btn #edit-btn:hover{
     background-color: #AACB73;
 }
 .btn #del-btn{
     background-color: #FF7171;
-    width: 8vw;
+    width: 10vw;
 }
 .btn #del-btn:hover{
     background-color: #FF5A5A;
 }
 .side-bar #clicked-page{
     background-color: #FFF8F8;
+}
+.account{
+    display: flex;
+    align-items: center;
+    margin-top: 10%;
+    font-size: 13px;
+}
+.account-item{
+    margin-left: 1vw;
+}
+button{
+    display: block;
+    justify-content: space-between;
+    border: none;
+    background-color: #FFE8E8;
+    padding: 10px;
+    border-radius: 8px;
+    margin-top: 8px;
+    width: 100%;
+}
+button:hover{
+    background-color: #FFD4D4;
+}
+hr{
+    margin-top: 25px;
 }
