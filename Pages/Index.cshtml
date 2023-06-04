@@ -1,6 +1,15 @@
 ﻿@page
+@using System.Text.Json;
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
 }
 
+@foreach (Dictionary<string, string> x in Model.dataArray)
+{
+    foreach (var y in x)
+    {
+        <p>@y.Key</p>
+        <p>@y.Value</p>
+    }
+}

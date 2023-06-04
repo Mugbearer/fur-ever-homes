@@ -15,7 +15,7 @@ namespace fur_ever_homes
 
         public static JsonElement GetData(string uri)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
             var result = reader.ReadToEnd();
