@@ -27,7 +27,7 @@
                 </div>           
                 <hr>         
                 <ul>
-                    <li><a href="register-new.html">
+                    <li><a href="register-new.html" id="clicked-page">
                         <div class="side-bar-item-container">
                             <img src="side-bar-icons/register-pet-icon.svg" />
                             <span>Register new pet</span>
@@ -45,7 +45,7 @@
                             <span>View unregistered pets</span>
                         </div>
                     </a></li>
-                    <li><a href="adoption-request.html" id="clicked-page">
+                    <li><a href="adoption-request.html">
                         <div class="side-bar-item-container">
                             <img src="side-bar-icons/adoption-req-icon.svg" />
                             <span>Adoption Requests</span>
@@ -54,46 +54,47 @@
                 </ul>
             </div>
         </div>
-       <div class="main">
-            <div class="container">
-                <div class="nav-bar">
-                    <ul>
-                        <li><a href="">HOME</a></li>
-                        <li><a href="">ABOUT US</a></li>
-                        <li><a href="">PRIVACY</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="main-items">
-                <div class="card-container">
-                    <div class="card">
-                        <div class="card-img car-url"></div>
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
-                        <div class="btn">
-                            <a href="" id="edit-btn">APPROVE</a>
-                            <a href="" id="del-btn">REJECT</a>
+        <div class="main">
+            <div class="form-container">
+                <form method="post" class="login-form">
+                    <img src="~/images/close-icon.svg"/>
+                    <h1>Register your <span>fur</span>-baby</h1>
+                    <div class="form-group">
+                        <div class="row">
+                            <div class="column">
+                                <span class="text-validation">Error message</span>
+                                <input type="text" placeholder="* pet name" />
+                            </div>
+                            <div class="column">
+                                <span>Sex</span>
+                                <div class="sex">
+                                    <input type="radio" name="radio">
+                                    <label class="container">Male</label>
+                                    <input type="radio" name="radio">
+                                    <label class="container">Female</label>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-img car-url"></div>
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
-                        <div class="btn">
-                            <a href="" id="edit-btn">APPROVE</a>
-                            <a href="" id="del-btn">REJECT</a>
+                        <div class="row">
+                            <div class="column">
+                                <span class="text-validation">Error message</span>
+                                <input type="text" placeholder="* birthdate" />
+                            </div>
+                            <div class="column">
+                                <span class="text-validation">Error message</span>
+                                <input type="text" placeholder="* breed" />
+                            </div>
                         </div>
+                        <span class="text-validation" style="margin-top: 2%;">Error message</span>
+                        <input type="text" placeholder="*description"/>
+                        <span class="text-validation" style="margin-top: 2%;">Error message</span>
+                        <input type="text" placeholder="*image url"/>
+
+                        <button id="register-btn">
+                            REGISTER
+                        </button>
                     </div>
-                    <div class="card">
-                        <div class="card-img car-url"></div>
-                        <h3>Title</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
-                        <div class="btn">
-                            <a href="" id="edit-btn">APPROVE</a>
-                            <a href="" id="del-btn">REJECT</a>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
        </div>
     </body>
