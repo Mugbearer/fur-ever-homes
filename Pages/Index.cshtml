@@ -5,6 +5,8 @@
     ViewData["Title"] = "Home page";
 }
 
+@HttpContext.Session.GetString("AccountID")
+
 @foreach (Dictionary<string, string> x in Model.dataArray)
 {
     foreach (var y in x)

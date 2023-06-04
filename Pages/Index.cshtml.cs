@@ -9,16 +9,11 @@ namespace fur_ever_homes.Pages
 {
     public class IndexModel : PageModel
     {
-        public readonly JsonElement root;
         public readonly Dictionary<string, string>[] dataArray;
+
         public IndexModel()
         {
-            string uri = "display_pets.php?accountID=all&status=confirmed";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
-            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-            string result = reader.ReadToEnd();
-            dataArray = JsonSerializer.Deserialize<Dictionary<string, string>[]>(result);
+            dataArray = Global.GetData("display_pets.php?accountID=all&status=confirmed");
         }
 
         public void OnGet()

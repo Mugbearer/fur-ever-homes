@@ -42,16 +42,17 @@ namespace fur_ever_homes.Pages
                 return Page();
             }
 
-            request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
-            response = (HttpWebResponse)request.GetResponse();
-            StreamReader reader = new StreamReader(response.GetResponseStream());
-            var result = reader.ReadToEnd();
-            using JsonDocument doc = JsonDocument.Parse(result);
-            JsonElement root = doc.RootElement;
+            //request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
+            //response = (HttpWebResponse)request.GetResponse();
+            //StreamReader reader = new StreamReader(response.GetResponseStream());
+            //var result = reader.ReadToEnd();
+            //using JsonDocument doc = JsonDocument.Parse(result);
+            //JsonElement root = doc.RootElement;
 
+            Dictionary<string, string>[] dataArray = Global.GetData(uri);
 
-            HttpContext.Session.SetString("AccountID", root.GetProperty("account_id").ToString());
-            HttpContext.Session.SetString("IsAdmin", root.GetProperty("is_admin").ToString());
+            HttpContext.Session.SetString("AccountID", dataArray[0]["account_id"].ToString());
+            HttpContext.Session.SetString("IsAdmin", dataArray[0]["is_admin"].ToString());
             return RedirectToPage("Index");
         }
     }

@@ -13,16 +13,13 @@ namespace fur_ever_homes
             return reader.ReadToEnd();
         }
 
-        public static JsonElement GetData(string uri)
+        public static Dictionary<string, string>[] GetData(string uri)
         {
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
-            var result = reader.ReadToEnd();
-            using JsonDocument doc = JsonDocument.Parse(result);
-            JsonElement root = doc.RootElement;
-
-            return root;
+            string result = reader.ReadToEnd();
+            return JsonSerializer.Deserialize<Dictionary<string, string>[]>(result);
         }
     }
 }
