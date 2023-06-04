@@ -279,7 +279,17 @@ input, textarea {
     background: #FFFFFF;
     box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
     border-radius: 4px;
-    padding: 21px 25px 32px 0;
+    padding: 24px 25px 32px 0;
+}
+
+.sign-up-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 529px;
+    margin-bottom: 25vh;
 }
 
 .sign-up-form h1{
@@ -287,7 +297,7 @@ input, textarea {
     font-size: 35px;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-top: 20px;
+    margin-top:10px;
     margin-left: 80px;
 }
 
@@ -299,12 +309,20 @@ input, textarea {
     color: #CF8E8E;
 }
 
-.sign-up-form1{
+.sign-up-form1 {
     display: flex;
-    justify-content:space-between;
-    align-content:center;  
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    gap: 1em;
+    width: 100%;
 }
-.sign-up-fn{
-    display:flex;
-    
+.sign-up-fn {
+    display: flex;
+    flex-direction: column;
 }
+.sign-up-ln {
+    display: flex;
+    flex-direction: column;
+}
+

@@ -2,7 +2,7 @@
 @model fur_ever_homes.Pages.SignUpModel
 @{
 }
-<div class="form-container">
+<div class="sign-up-form-container">
     <form method="post" class="sign-up-form">
         <img src="~/images/close-icon.svg"/>
         <div></div>
@@ -18,9 +18,28 @@
                     <span class="text-validation">Error message</span>
                 </div>
             </div>
+
+            <div class="sign-up-form1">
+                <div class="sign-up-fn">
+                    <input placeholder="* username" />
+                    <span class="text-validation">Error message</span>
+                </div>
+                <div class="sign-up-ln">
+                    <input placeholder="contact no."/>
+                    <span class="text-validation">Error message</span>
+                </div>
+            </div>
+
+            <div class="sign-up-form2">
+                <input placeholder="* email" />
+                <span class="text-validation">Error message</span>
+                <input class="margin-top-30" placeholder="* password" />
+                <span class="text-validation">Error message</span>
+            </div>
+
             <button class="login-button">
                 <div>
-                    LOGIN
+                    Register
                 </div>
             </button>
             <div class="register-link">
