@@ -78,26 +78,27 @@ background-color: #FFE8E8;
     margin-top: 30px;
 }
 .card-container{
-    display: flex;
     justify-content: center;
     display: grid;
-    grid-template-columns: repeat(3, 30%);
+    grid-template-columns: repeat(3, 40vh);
+    gap:3vh;
 }
 .card{
-    background: white;
-    width: 300px;
-    margin: 10px;
+    background: #FFFFFF;
+    width: 20vw;
     border-radius: 8px;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
     
 }
 .card-img{
-    height: 80%;
-    margin-bottom: 15px;
+    height: 15vh;
+    margin-bottom: 1vh;
+    margin: 1.5vh;
     background-size: cover;
-    border-radius: 8px 8px 0 0;
+    border-radius: 8px;
 }
 .car-url{
-    background-image: url(corgi.png);
+    background-image: url(corgi.jpeg);
 }
 .card h3{
     padding: 10px; 
@@ -107,15 +108,38 @@ background-color: #FFE8E8;
     padding: 10px; 
 }
 .card a{
-    background-color: #FF7171;
     color:#FEFEF5;
-    border-radius: 8px;
     display: block;
-    margin: 0 10px 20px 10px;
-    line-height: 40px;
+    border-radius: 8px;
+    line-height: 5vh;
     font-size: 14px;
     text-align: center;
+    background-color: #FF7171;
+    margin: 2vh;
 }
-.card a:hover{
+.btn{
+    display: flex;
+}
+.btn #unregister-btn{
+    background-color: #FF7171;
+}
+.btn #unregister-btn:hover{
     background-color: #FF5A5A;
+}
+.btn #edit-btn{
+    background-color: #CDE990;
+    width: 14vw;
+}
+.btn #edit-btn:hover{
+    background-color: #AACB73;
+}
+.btn #del-btn{
+    background-color: #FF7171;
+    width: 8vw;
+}
+.btn #del-btn:hover{
+    background-color: #FF5A5A;
+}
+.side-bar #clicked-page{
+    background-color: #FFF8F8;
 }
