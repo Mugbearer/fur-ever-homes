@@ -3,18 +3,18 @@
 @{
 }
 
-<div class="form-container">
+<div class="form-container" method="post">
     <form method="post" class="login-form">
         <img src="~/images/close-icon.svg"/>
         <div></div>
         <h1>Welcome back <span>fur</span>-parent!</h1>
         <div class="form-group">
-            <input placeholder="* email" />
-            <span class="text-validation">Error message</span>
-            <input class="margin-top-30" placeholder="* password" />
-            <span class="text-validation">Error message</span>
+            <input asp-for="LogIn.Username" placeholder="* username" maxlength="30" />
+            <span asp-validation-for="LogIn.Username" class="text-validation"></span>
+            <input asp-for="LogIn.Password" class="margin-top-30" placeholder="* password" maxlength="30" />
+            <span asp-validation-for="LogIn.Password" class="text-validation"></span>
 
-            <button class="login-button">
+            <button class="login-button" type="submit">
                 <div>
                     Login
                 </div>

@@ -21,10 +21,20 @@
             <a asp-page="AboutUs">About Us</a>
             <a asp-page="Privacy">Privacy</a>
         </div>
-        <a class="logo-grp" asp-page="Login">
-            <img class="logo" src="~/images/user-2.svg" alt="" />
-            <h3>Log In Your Account</h3>
-        </a>
+        @if (Context.Session.GetString("AccountID") == null)
+        {
+            <a class="logo-grp" asp-page="Login">
+                <img class="logo" src="~/images/user-2.svg" alt="" />
+                <h3>Log In Your Account</h3>
+            </a>
+        }
+        else
+        {
+            <a class="logo-grp" asp-page="Profile">
+                <img class="logo" src="~/images/user-2.svg" alt="" />
+                <h3>Profile</h3>
+            </a>
+        }
     </header>
     <main role="main" >
         @RenderBody()
