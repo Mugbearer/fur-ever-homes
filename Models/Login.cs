@@ -7,6 +7,10 @@ namespace fur_ever_homes.Models
         [Required]
         [MinLength(3)]
         [MaxLength(30)]
-        public string username { get; set; }
+        public string Username { get; set; }
+
+        [Required]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
     }
 }
