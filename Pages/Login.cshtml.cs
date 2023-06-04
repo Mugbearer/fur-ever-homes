@@ -27,7 +27,7 @@ namespace fur_ever_homes.Pages
 
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(GlobalSettings.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            string responseString = ResponseIntoString(response);
+            string responseString = GlobalSettings.ResponseIntoString(response);
 
             if (responseString == "Username does not exist")
             {
@@ -53,12 +53,6 @@ namespace fur_ever_homes.Pages
             HttpContext.Session.SetString("AccountID", root.GetProperty("account_id").ToString());
             HttpContext.Session.SetString("IsAdmin", root.GetProperty("is_admin").ToString());
             return RedirectToPage("Index");
-        }
-
-        private static string ResponseIntoString(HttpWebResponse response)
-        {
-            StreamReader reader = new(response.GetResponseStream());
-            return reader.ReadToEnd();
         }
     }
 }

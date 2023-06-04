@@ -2,41 +2,41 @@
 @model fur_ever_homes.Pages.SignUpModel
 @{
 }
-<div class="sign-up-form-container">
+<div class="sign-up-form-container" method="post">
     <form method="post" class="sign-up-form">
         <img src="~/images/close-icon.svg"/>
             <h1>Be a<span> fur</span>-parent today.</h1>
         <div class="form-group">
             <div class="sign-up-form1">
                 <div class="sign-up-fn">
-                    <input placeholder="* first name"/>
-                    <span class="text-validation">Error message</span>
+                    <input asp-for="SignUp.FirstName" placeholder="* first name" maxlength="30" />
+                    <span asp-validation-for="SignUp.FirstName" class="text-validation"></span>
                 </div>
                 <div class="sign-up-ln">
-                    <input placeholder="* last name" />
-                    <span class="text-validation">Error message</span>
+                    <input asp-for="SignUp.LastName" placeholder="* last name" maxlength="30" />
+                    <span asp-validation-for="SignUp.LastName" class="text-validation"></span>
                 </div>
             </div>
 
             <div class="sign-up-form1">
                 <div class="sign-up-fn">
-                    <input placeholder="* username" />
-                    <span class="text-validation">Error message</span>
+                    <input asp-for="SignUp.Username" placeholder="* username" maxlength="30" />
+                    <span asp-validation-for="SignUp.Username" class="text-validation"></span>
                 </div>
                 <div class="sign-up-ln">
-                    <input placeholder="contact no."/>
-                    <span class="text-validation">Error message</span>
+                    <input asp-for="SignUp.ContactNumber" placeholder="contact no." maxlength="15" />
+                    <span asp-validation-for="SignUp.ContactNumber" class="text-validation"></span>
                 </div>
             </div>
 
             <div class="sign-up-form2">
-                <input placeholder="* email" />
-                <span class="text-validation">Error message</span>
-                <input class="margin-top-30" placeholder="* password" />
-                <span class="text-validation">Error message</span>
+                <input asp-for="SignUp.EmailAddress" placeholder="* email" maxlength="50" />
+                <span asp-validation-for="SignUp.EmailAddress" class="text-validation"></span>
+                <input asp-for="SignUp.Password" class="margin-top-30" placeholder="* password" maxlength="30" />
+                <span asp-validation-for="SignUp.Password" class="text-validation"></span>
             </div>
 
-            <button class="login-button">
+            <button class="login-button" type="submit">
                 <div>
                     Register
                 </div>
