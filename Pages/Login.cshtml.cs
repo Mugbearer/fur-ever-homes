@@ -18,16 +18,16 @@ namespace fur_ever_homes.Pages
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid || LogIn == null)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
 
             string uri = $"log_in.php?username={LogIn.Username}&password={LogIn.Password}";
 
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(GlobalSettings.URI + uri);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            string responseString = GlobalSettings.ResponseIntoString(response);
+            string responseString = Global.ResponseIntoString(response);
 
             if (responseString == "Username does not exist")
             {
@@ -37,12 +37,12 @@ namespace fur_ever_homes.Pages
             {
                 ModelState.AddModelError("LogIn.Password", responseString);
             }
-            if (!ModelState.IsValid || LogIn == null)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
 
-            request = (HttpWebRequest)WebRequest.Create(GlobalSettings.URI + uri);
+            request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             response = (HttpWebResponse)request.GetResponse();
             StreamReader reader = new StreamReader(response.GetResponseStream());
             var result = reader.ReadToEnd();

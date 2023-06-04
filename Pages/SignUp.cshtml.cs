@@ -16,16 +16,16 @@ namespace fur_ever_homes.Pages
 
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid || SignUp == null)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
             
             string uri = $"sign_up.php?username={SignUp.Username}&password={SignUp.Password}&firstName={SignUp.FirstName}" +
                 $"&lastName={SignUp.LastName}&emailAddress={SignUp.EmailAddress}&contactNum={SignUp.ContactNumber}";
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(GlobalSettings.URI + uri);
+            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            string responseString = GlobalSettings.ResponseIntoString(response);
+            string responseString = Global.ResponseIntoString(response);
 
             if (responseString.Contains("Email is already taken"))
             {
@@ -35,7 +35,7 @@ namespace fur_ever_homes.Pages
             {
                 ModelState.AddModelError("SignUp.Username", "Username is already taken");
             }
-            if (!ModelState.IsValid || SignUp == null)
+            if (!ModelState.IsValid)
             {
                 return Page();
             }
