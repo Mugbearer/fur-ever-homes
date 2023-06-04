@@ -7,4 +7,22 @@
     <RootNamespace>fur_ever_homes</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\css\profile-page.css" />
+    <Content Remove="wwwroot\side-bar-icons\adoption-req-icon.svg" />
+    <Content Remove="wwwroot\side-bar-icons\register-pet-icon.svg" />
+    <Content Remove="wwwroot\side-bar-icons\user-icon.svg" />
+    <Content Remove="wwwroot\side-bar-icons\view-registered-icon.svg" />
+    <Content Remove="wwwroot\side-bar-icons\view-unregistered-icon.svg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\css\profile-page.css" />
+    <None Include="wwwroot\side-bar-icons\adoption-req-icon.svg" />
+    <None Include="wwwroot\side-bar-icons\register-pet-icon.svg" />
+    <None Include="wwwroot\side-bar-icons\user-icon.svg" />
+    <None Include="wwwroot\side-bar-icons\view-registered-icon.svg" />
+    <None Include="wwwroot\side-bar-icons\view-unregistered-icon.svg" />
+  </ItemGroup>
+
 </Project>

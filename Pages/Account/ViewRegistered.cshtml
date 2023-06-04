@@ -1,13 +1,25 @@
 ﻿@page
 @model fur_ever_homes.Pages.Account.ViewRegisteredModel
 @{
+    Layout = "_LayoutProfile";
 }
 
-@foreach (Dictionary<string, string> x in Model.dataArray)
+
+
+@foreach (Dictionary<string, string> petData in Model.dataArray)
 {
-    foreach (var y in x)
-    {
-        <p>@y.Key</p>
-        <p>@y.Value</p>
-    }
+    string petID = petData["pet_id"];
+    string name = petData["name"];
+    string description = petData["description"];
+    string imgURL = petData["image_url"];
+
+    <form class="card-container" method="post">
+        <div class="card">
+            <div class="card-img" style="background-image: url(@imgURL);"></div>
+            <h3>@name</h3>
+            <p>@description</p>
+            <input value="@petID" hidden/>
+            <button type="submit">UNREGISTER</button>
+        </div>
+    </form>
 }

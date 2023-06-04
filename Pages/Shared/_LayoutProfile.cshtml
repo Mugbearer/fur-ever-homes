@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - fur_ever_homes</title>
+    <!-- css -->
+    <link rel="stylesheet" href="~/css/profile-page.css" asp-append-version="true" />
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500&display=swap" rel="stylesheet">
+    <!-- icons -->
+    <script src="https://kit.fontawesome.com/797890d42b.js" crossorigin="anonymous"></script>
+</head>
+    <body>
+        <div class="container">
+            <div class="side-bar">
+                <div class="logo-title">
+                    <i class="fa-solid fa-paw" style="color: #AACB73; padding-right: 8px; font-size: 32px;"></i>
+                    <h2>FurEverHomes</h2>
+                </div>
+                <div class="account">
+                    <img src="~/side-bar-icons/user-icon.svg" />
+                    <div class="account-item">
+                        <span>Sophia Krisselle</span>
+                        <button>LOGOUT</button>
+                    </div>
+                </div>
+                <hr>
+                <ul>
+                    <li>
+                        <a href="register-new.html">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/register-pet-icon.svg" />
+                                <span>Register new pet</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="registered.html" id="clicked-page">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/view-registered-icon.svg" />
+                                <span>View registered pets</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="unregistered.html">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/view-unregistered-icon.svg" />
+                                <span>View unregistered pets</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="adoption-request.html">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/adoption-req-icon.svg" />
+                                <span>Adoption Requests</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <div class="main">
+        <div class="container">
+            <div class="nav-bar">
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT US</a></li>
+                    <li><a href="">PRIVACY</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-items">
+            @RenderBody()
+        </div>
+    </div>
+    </body>
+</html>
