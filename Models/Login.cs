@@ -2,7 +2,7 @@
 
 namespace fur_ever_homes.Models
 {
-    public class Login
+    public class LogIn
     {
         [Required]
         [MinLength(3)]
