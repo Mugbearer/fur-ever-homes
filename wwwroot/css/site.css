@@ -85,7 +85,256 @@ footer > * {
 }
 
 .lower-footer {
-    height: 15%;
-    background: #FFE8E8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 11.2%;
     color: #CF8E8E;
+    font-size: 0.8rem;
+}
+
+.footer-group {
+}
+
+.first-half {
+}
+
+.second-half {
+}
+
+.login-form {
+    width: 663px;
+    height: 425px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 21px 25px 32px 0;
+}
+
+    .login-form img {
+        float: right;
+    }
+
+    .login-form div {
+        width: 100%;
+    }
+
+    .login-form h1 {
+        font-weight: 500;
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 1px;
+        margin-top: 34px;
+        margin-left: 70px;
+    }
+
+        .login-form h1 span {
+            color: #CF8E8E;
+        }
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 529px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 450px;
+    height: 119px;
+    margin-top: 53px;
+    margin-left: 99px;
+}
+
+.margin-top-30 {
+    margin-top: 30px;
+}
+
+.form-group, input::placeholder {
+    font-family: 'Poppins';
+    font-weight: 300;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
+
+    .form-group > * {
+        display: block;
+        width: 100%;
+    }
+
+input, textarea {
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.text-validation {
+    color: red;
+    font-size: 0.7rem;
+}
+
+.login-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 63px;
+    max-height: 63px;
+    background: #CDE990;
+    border-radius: 8px;
+    border: none;
+    margin-top: 30px;
+    transition: 0.2s;
+}
+
+    .login-button:hover {
+        filter: brightness(90%);
+    }
+
+    .login-button div {
+        color: #FEFEF5;
+        font-weight: 600;
+        font-size: 1.1rem;
+        line-height: 22px;
+        letter-spacing: 1px;
+    }
+
+.register-link {
+    margin-top: 11px;
+    text-align: center;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+}
+
+    .register-link a {
+        text-decoration-line: underline;
+    }
+
+.vl {
+    border-left: 3px solid grey;
+    height: 200px;
+}
+
+.slogo {
+    display: flex;
+    justify-content: space-between;
+    gap: 1em;
+    margin-top: 5vh;
+    height: 30px
+}
+
+.contact {
+    display: block;
+    align-content: center;
+    white-space: pre-wrap;
+    margin-top: 5vh;
+}
+
+.policy-p {
+    display: block;
+    justify-content: center;
+    white-space: pre-wrap;
+}
+
+    .policy-p h2 {
+        justify-content: center;
+        margin-left: 4vh;
+    }
+
+.AU-Body {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.AU-image {
+    height: 100%;
+    width: 100%;
+}
+
+.AU-content {
+    margin-left: 4vh;
+    white-space: pre-wrap;
+}
+
+.sign-up-form {
+    position: relative;
+    width: 701px;
+    height: 520px;
+    background: #FFFFFF;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
+    border-radius: 4px;
+    padding: 24px 25px 32px 0;
+}
+
+.sign-up-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    min-height: 529px;
+    margin-top: 5vh;
+    margin-bottom: 20vh;
+}
+
+.sign-up-form h1 {
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 30px;
+    letter-spacing: 1px;
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.sign-up-form img {
+    float: right;
+}
+
+.sign-up-form h1 span {
+    color: #CF8E8E;
+}
+
+.sign-up-form1 {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-direction: row;
+    margin-top: 10px;
+    height: 100px;
+    row-gap: 2em;
+    margin-left: 30px;
+}
+
+.sign-up-fn {
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    width: 45%;
+    float: left;
+}
+
+.sign-up-ln {
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    float: right
+}
+
+.sign-up-form2 {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 450px;
+    height: 100px;
+    margin-left: 30px;
 }

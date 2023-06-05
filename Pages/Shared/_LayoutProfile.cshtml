@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="registered.html" id="clicked-page">
+                    <a asp-page="Account/ViewUnregistered" id="clicked-page">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-registered-icon.svg" />
                                 <span>View registered pets</span>
@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="unregistered.html">
+                        <a asp-page="Account/ViewUnregistered">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-unregistered-icon.svg" />
                                 <span>View unregistered pets</span>
@@ -61,7 +61,18 @@
                             </div>
                         </a>
                     </li>
-                </ul>
+                @if (Context.Session.GetString("IsAdmin") == "true")
+                {
+                    <li>
+                        <a asp-asp-page="">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/adoption-req-icon.svg" />
+                                <span>Adoption Requests</span>
+                            </div>
+                        </a>
+                    </li>
+                }
+            </ul>
             </div>
         </div>
     <div class="main">

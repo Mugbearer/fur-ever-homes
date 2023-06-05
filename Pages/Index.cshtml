@@ -2,7 +2,7 @@
 @using System.Text.Json;
 @model IndexModel
 @{
-    Layout = "_LayoutProfile";
+    Layout = "_LayoutEmpty";
     ViewData["Title"] = "Home page";
 }
 
@@ -20,19 +20,30 @@
 </head>
 <body>
     <header>
-        <a class="logo-grp" href="#">
+        <a class="logo-grp" asp-page="Index">
             <img class="logo" src="~/images/logo.svg" alt="" />
             <p class="website-name">FurEverHomes</p>
         </a>
         <div class="nav-links">
-            <a href="#">Home</a>
+            <a asp-page="Index">Home</a>
             <a asp-page="AboutUs">About Us</a>
             <a asp-page="Privacy">Privacy</a>
         </div>
-        <a class="logo-grp" asp-page="Login">
-            <img class="logo" src="~/images/user-2.svg" alt="" />
-            <h3>Log In Your Account</h3>
-        </a>
+        @if (HttpContext.Session.GetString("AccountID") == null)
+        {
+            <a class="logo-grp" asp-page="Login">
+                <img class="logo" src="~/images/user-2.svg" alt="" />
+                <h3>Log In Your Account</h3>
+            </a>
+        }
+        else
+        {
+            <a class="logo-grp" asp-page="Account/ViewRegistered">
+                <img class="logo" src="~/images/user-2.svg" alt="" />
+                <h3>Profile</h3>
+            </a>
+        }
+
 
     </header>
 
@@ -45,12 +56,14 @@
                 string imageURL = x["image_url"];
                 string description = x["description"];
 
-                <form class="card">
-                    <div class="card-img car-url" style="background: src(@imageURL);"></div>
+                <form method="post" class="card">
+                    <div class="card-img car-url" style="background: url(@imageURL);"></div>
                     <h3>@name</h3>
                     <p>@description</p>
                     <input asp-for="PetCard.PetID" value="@petID" type="hidden" />
-                    <button type="submit">ADOPT</button>
+                    <div>
+                        <button type="submit">ADOPT</button>
+                    </div>
                 </form>
             }
         </div>
