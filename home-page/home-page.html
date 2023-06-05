@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - fur_ever_homes</title>
+    <link rel="stylesheet" href="style.css" asp-append-version="true" />
+    <link rel="stylesheet" href="home-page.css" asp-append-version="true" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a class="logo-grp" href="#">
+            <img class="logo" src="~/images/logo.svg" alt="" />
+            <p class="website-name">FurEverHomes</p>
+        </a>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a asp-page="AboutUs">About Us</a>
+            <a asp-page="Privacy">Privacy</a>
+        </div>
+        <a class="logo-grp" asp-page="Login">
+            <img class="logo" src="~/images/user-2.svg" alt="" />
+            <h3>Log In Your Account</h3>
+        </a>
+        
+    </header>
+    
+    <main role="main" >
+        <div class="card-container">
+            <div class="card">
+                <div class="card-img car-url"></div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+                <a href="">ADOPT</a>
+            </div>
+            <div class="card">
+                <div class="card-img car-url"></div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+                <a href="">ADOPT</a>
+            </div>
+            <div class="card">
+                <div class="card-img car-url"></div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+                <a href="" id="unregister-btn">ADOPT</a>
+            </div>
+            <div class="card">
+                <div class="card-img car-url"></div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+                <a href="" id="unregister-btn">ADOPT</a>
+            </div>
+            <div class="card">
+                <div class="card-img car-url"></div>
+                <h3>Title</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+                <a href="" id="unregister-btn">ADOPT</a>
+            </div>
+        </div>
+    </div>
+    </main>
+
+    <footer >
+        <div class="upper-footer">
+            <img class="footer-group" src="~/images/footer-group.svg" />
+
+            <div class="vl">
+            </div>
+
+            <div>
+                <h2>Keep Connected</h2>
+                <div class="slogo" href="#">
+                    <img class="slogo" src="~/images/facebook-logo.svg" />
+                    <img class="slogo" src="~/images/Ig-logo.svg" />
+                    <img class="slogo" src="~/images/twitter-logo.svg" />
+                </div>   
+
+            </div>
+
+            <div>
+                <h2>Contact Us</h2>
+                <div class="contact">
+                    <a>+63 9052800700</a>
+                    <a>fureverhomes@gmail.com</a>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="lower-footer">
+            <p>&copy; 2023 FurEverHomes | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
