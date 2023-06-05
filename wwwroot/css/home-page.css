@@ -1,0 +1,57 @@
+﻿.main-items {
+    margin-top: 30px;
+}
+
+.card-container {
+    justify-content: center;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(3, 40vh);
+    gap: 3vw;
+}
+
+.card {
+    background: #FFFFFF;
+    width: 22vw;
+    border-radius: 8px;
+    box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
+    max-width: 25vw;
+}
+
+.card-img {
+    height: 20vh;
+    margin-bottom: 1vh;
+    margin: 1.5vh;
+    background-size: cover;
+    border-radius: 8px;
+}
+
+.car-url {
+    background-image: url(corgi.jpeg);
+}
+
+.card h3 {
+    padding: 10px;
+    font-weight: 400;
+}
+
+.card p {
+    font-size: 11px;
+    padding: 10px;
+}
+
+.card a {
+    color: #FEFEF5;
+    display: block;
+    border-radius: 8px;
+    line-height: 5vh;
+    font-size: 14px;
+    text-align: center;
+    background-color: #CDE990;
+    margin: 2vh;
+    font-weight: 500;
+}
+
+    .card a:hover {
+        background-color: #AACB73;
+    }

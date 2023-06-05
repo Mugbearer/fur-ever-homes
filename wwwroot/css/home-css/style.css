@@ -15,9 +15,9 @@ main {
     min-height: 60vh;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
+header{
+    display:flex;
+    justify-content:space-between;
     padding: 2.5em 7.5em;
 }
 
@@ -36,9 +36,10 @@ footer {
     line-height: 22px;
 }
 
-.logo-grp {
-    display: flex;
+.logo-grp{
+    display:flex;
     gap: 1em;
+    
 }
 
 .website-name {
@@ -47,7 +48,7 @@ footer {
     font-size: 30px;
 }
 
-.login {
+.login{
     font-size: 20px;
 }
 
@@ -57,8 +58,9 @@ footer {
     font-size: 20px;
 }
 
-header > * {
-    align-items: center;
+header > *{
+    align-items:center;
+
 }
 
 a, a:hover, a:focus, a:visited {
@@ -68,17 +70,17 @@ a, a:hover, a:focus, a:visited {
 
 
 
-footer > div {
-    width: 100%;
+footer > div{
+    width:100%;
 }
 
-footer > * {
-    align-content: center;
+footer > *{
+    align-content:center;
 }
 
 .upper-footer {
     display: flex;
-    justify-content: space-between;
+    justify-content:space-between;
     height: 88.8%;
     background: #FFFFEF;
     padding: 66px 138px 72px 141px;
@@ -93,13 +95,15 @@ footer > * {
     font-size: 0.8rem;
 }
 
-.footer-group {
+.footer-group{
+    
 }
 
 .first-half {
 }
 
-.second-half {
+.second-half{
+
 }
 
 .login-form {
@@ -111,28 +115,28 @@ footer > * {
     padding: 21px 25px 32px 0;
 }
 
-    .login-form img {
-        float: right;
-    }
+.login-form img {
+    float: right;
+}
 
-    .login-form div {
-        width: 100%;
-    }
+.login-form div {
+    width: 100%;
+}
 
-    .login-form h1 {
-        font-weight: 500;
-        font-size: 30px;
-        line-height: 45px;
-        letter-spacing: 1px;
-        margin-top: 34px;
-        margin-left: 70px;
-    }
+.login-form h1 {
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 45px;
+    letter-spacing: 1px;
+    margin-top: 34px;
+    margin-left: 70px;
+}
 
-        .login-form h1 span {
-            color: #CF8E8E;
-        }
+.login-form h1 span {
+    color: #CF8E8E;
+}
 
-.form-container {
+.form-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -151,7 +155,7 @@ footer > * {
     margin-left: 99px;
 }
 
-.margin-top-30 {
+.margin-top-30{
     margin-top: 30px;
 }
 
@@ -163,10 +167,10 @@ footer > * {
     letter-spacing: 1px;
 }
 
-    .form-group > * {
-        display: block;
-        width: 100%;
-    }
+.form-group > *{
+    display: block;
+    width: 100%;
+}
 
 input, textarea {
     border: none;
@@ -192,17 +196,17 @@ input, textarea {
     transition: 0.2s;
 }
 
-    .login-button:hover {
-        filter: brightness(90%);
-    }
+.login-button:hover {
+    filter: brightness(90%);
+}
 
-    .login-button div {
-        color: #FEFEF5;
-        font-weight: 600;
-        font-size: 1.1rem;
-        line-height: 22px;
-        letter-spacing: 1px;
-    }
+.login-button div {
+    color: #FEFEF5;
+    font-weight: 600;
+    font-size: 1.1rem;
+    line-height: 22px;
+    letter-spacing: 1px;
+}
 
 .register-link {
     margin-top: 11px;
@@ -214,62 +218,64 @@ input, textarea {
     line-height: 18px;
     letter-spacing: 1px;
 }
-
-    .register-link a {
-        text-decoration-line: underline;
-    }
-
-.vl {
-    border-left: 3px solid grey;
-    height: 200px;
+.register-link a {
+    text-decoration-line: underline;
 }
 
-.slogo {
-    display: flex;
-    justify-content: space-between;
-    gap: 1em;
-    margin-top: 5vh;
-    height: 30px
+.vl{
+    border-left:3px solid grey;
+    height: 200px;
+
+}
+
+.slogo{
+    display:flex;
+    justify-content:space-between;
+    gap:1em;
+    margin-top:5vh;
+    height:30px
 }
 
 .contact {
     display: block;
-    align-content: center;
+    align-content:center;
     white-space: pre-wrap;
     margin-top: 5vh;
 }
 
-.policy-p {
-    display: block;
-    justify-content: center;
+.policy-p{
+    display:block;
+    justify-content:center;
     white-space: pre-wrap;
 }
 
-    .policy-p h2 {
-        justify-content: center;
-        margin-left: 4vh;
-    }
-
-.AU-Body {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
+.policy-p h2{
+    justify-content:center;
+    margin-left: 4vh;
 }
 
+.AU-Body {
+    display:flex;
+    align-content: center;
+    justify-content: space-between;
+ 
+
+}
 .AU-image {
     height: 100%;
     width: 100%;
-}
 
+}
 .AU-content {
     margin-left: 4vh;
-    white-space: pre-wrap;
+    white-space:pre-wrap;
+
 }
 
 .sign-up-form {
-    position: relative;
+    position:relative;
     width: 701px;
-    height: 520px;
+    height: 520px;  
     background: #FFFFFF;
     box-shadow: 0px 6px 40px rgba(0, 0, 0, 0.16);
     border-radius: 4px;
@@ -283,16 +289,16 @@ input, textarea {
     width: 100%;
     height: 100%;
     min-height: 529px;
-    margin-top: 5vh;
+    margin-top:5vh;
     margin-bottom: 20vh;
 }
 
-.sign-up-form h1 {
+.sign-up-form h1{
     font-weight: 500;
     font-size: 35px;
     line-height: 30px;
     letter-spacing: 1px;
-    margin-top: 10px;
+    margin-top:10px;
     margin-left: 80px;
 }
 
@@ -314,27 +320,26 @@ input, textarea {
     row-gap: 2em;
     margin-left: 30px;
 }
-
 .sign-up-fn {
     display: flex;
     flex-direction: column;
-    height: 70px;
+    height:70px;
     width: 45%;
-    float: left;
+    float:left;
 }
-
 .sign-up-ln {
     display: flex;
     flex-direction: column;
     width: 45%;
-    float: right
+    float:right
 }
 
 .sign-up-form2 {
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    width: 450px;
+    width:450px;
     height: 100px;
-    margin-left: 30px;
+    margin-left:30px;
+    
 }

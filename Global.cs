@@ -5,7 +5,7 @@ namespace fur_ever_homes
 {
     internal class Global
     {
-        public static string URI { get; } = "http://192.168.55.202/IT140P/fureverhomes-api/"; //Change this according to your IP address and directory
+        public static string URI { get; } = "http://172.18.17.110/IT140P/fureverhomes-api/"; //Change this according to your IP address and directory
 
         public static string ResponseIntoString(HttpWebResponse response)
         {
