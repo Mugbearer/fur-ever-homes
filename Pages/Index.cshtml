@@ -5,13 +5,20 @@
     ViewData["Title"] = "Home page";
 }
 
-@HttpContext.Session.GetString("AccountID")
-
-@foreach (Dictionary<string, string> x in Model.dataArray)
-{
-    foreach (var y in x)
+<div class="card-container">
+    @foreach (Dictionary<string, string> x in Model.dataArray)
     {
-        <p>@y.Key</p>
-        <p>@y.Value</p>
+        string petID = x["pet_id"];
+        string name = x["name"];
+        string imageURL = x["image_url"];
+        string description = x["description"];
+
+        <form class="card">
+            <div class="card-img" style="background: src(@imageURL);"></div>
+            <h3>@name</h3>
+            <p>@description</p>
+            <input asp-for="PetCard.PetID" value="@petID" type="hidden" />
+            <button type="submit">ADOPT</button>
+        </form>
     }
-}
+</div>
