@@ -34,17 +34,23 @@
     font-size: 11px;
     padding: 10px; 
 }
-.card a{
-    color:#FEFEF5;
-    display: block;
-    border-radius: 8px;
-    line-height: 5vh;
-    font-size: 14px;
-    text-align: center;
-    background-color: #CDE990;
-    margin: 2vh;
-    font-weight: 500;
+.card div{
+    display: flex;
+    align-items: center;
+    margin-top: 2%;
+    font-size: 13px;
 }
-.card a:hover{
+.card button{
+    display: block;
+    border: none;
+    background-color: #CDE990;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 5%;
+    margin-top: 8px;
+    width: 100%;
+    color: #FFFFFF;
+}
+.card button:hover{
     background-color: #AACB73;
 }
