@@ -103,9 +103,6 @@ body {
   background-size: cover;
   border-radius: 8px;
 }
-.car-url {
-  background-image: url(corgi.jpeg);
-}
 .card h3 {
   padding: 10px;
   font-weight: 400;
@@ -114,7 +111,7 @@ body {
   font-size: 11px;
   padding: 10px;
 }
-.card a {
+.card a, .card button {
   color: #fefef5;
   display: block;
   border-radius: 8px;
@@ -125,7 +122,7 @@ body {
   margin: 2vh;
   font-weight: 500;
 }
-.card a:hover {
+.card a:hover, .card button {
   background-color: #ff5a5a;
 }
 .btn {

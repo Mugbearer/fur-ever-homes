@@ -4,8 +4,6 @@
     Layout = "_LayoutProfile";
 }
 
-
-
 @foreach (Dictionary<string, string> petData in Model.dataArray)
 {
     string petID = petData["pet_id"];
@@ -18,7 +16,7 @@
             <div class="card-img" style="background-image: url(@imgURL);"></div>
             <h3>@name</h3>
             <p>@description</p>
-            <input value="@petID" hidden/>
+            <input asp-for="PetCard.PetID" value="@petID" type="hidden"/>
             <button type="submit">UNREGISTER</button>
         </div>
     </form>
