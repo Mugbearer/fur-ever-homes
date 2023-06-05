@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2023 at 02:01 AM
+-- Generation Time: Jun 05, 2023 at 05:29 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -35,7 +35,7 @@ CREATE TABLE `accounts` (
   `last_name` varchar(30) NOT NULL,
   `contact_num` varchar(15) NOT NULL,
   `email_address` varchar(50) NOT NULL,
-  `is_admin` varchar(10) NOT NULL
+  `is_admin` varchar(10) NOT NULL DEFAULT 'false'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -43,8 +43,9 @@ CREATE TABLE `accounts` (
 --
 
 INSERT INTO `accounts` (`account_id`, `username`, `password`, `first_name`, `last_name`, `contact_num`, `email_address`, `is_admin`) VALUES
-(6, 'Marex', 'Password123', 'Tahimiklang', 'SiMarc', '0922342', 'marcmagaling@live.mcl', 'false'),
-(7, 'mug', 'pass', 'qw', 'qw', '3', 'qwe@e.e', 'false');
+(6, 'user123', 'password', 'Emma', 'Johnson', '45345224', 'emma.johnson@example.com', 'true'),
+(7, 'coolguy82', 'password', 'Michael', 'Davis', '34535452523414', 'michael.davis@example.com', 'false'),
+(8, 'superuser', 'password', 'Jennifer', 'Smith', '57352451123', 'jennifer.smith@example.com', 'false');
 
 -- --------------------------------------------------------
 
@@ -57,7 +58,7 @@ CREATE TABLE `adoptions` (
   `pet_id` int(11) NOT NULL,
   `account_id` int(11) NOT NULL,
   `date` varchar(30) NOT NULL,
-  `status` varchar(15) NOT NULL
+  `status` varchar(15) NOT NULL DEFAULT 'pending'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -65,9 +66,12 @@ CREATE TABLE `adoptions` (
 --
 
 INSERT INTO `adoptions` (`adoption_id`, `pet_id`, `account_id`, `date`, `status`) VALUES
-(4, 12, 6, 'qweqw', 'terminated'),
-(5, 12, 6, 'qweqw', 'confirmed'),
-(6, 12, 6, 'qweqw', 'terminated');
+(7, 16, 7, 'March 11, 2023', 'pending'),
+(8, 17, 7, 'March 11, 2023', 'pending'),
+(9, 20, 8, 'March 11, 2023', 'pending'),
+(10, 21, 8, 'March 11, 2023', 'pending'),
+(11, 24, 6, 'March 11, 2023', 'pending'),
+(13, 25, 6, 'March 11, 2023', 'pending');
 
 -- --------------------------------------------------------
 
@@ -85,7 +89,7 @@ CREATE TABLE `pets` (
   `image_url` varchar(100) NOT NULL,
   `description` varchar(255) NOT NULL,
   `date_registered` varchar(30) NOT NULL,
-  `status` varchar(15) NOT NULL
+  `status` varchar(15) NOT NULL DEFAULT 'unconfirmed'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -93,10 +97,18 @@ CREATE TABLE `pets` (
 --
 
 INSERT INTO `pets` (`pet_id`, `account_id`, `name`, `sex`, `birthdate`, `breed`, `image_url`, `description`, `date_registered`, `status`) VALUES
-(12, 6, 'six', 'eqwrewq', 'rqwrqw', 'qwrwqq', 'https://picsum.photos/1920/1080', 'erqwrw', 'qwereqwr', 'confirmed'),
-(13, 7, 'seven', 'erweerew', 'werwr', 'werwer', 'https://picsum.photos/1920/1080', 'werwerewr', '2023/06/04', 'unconfirmed'),
-(14, 7, 'werewwerewrw', 'erweerew', 'werwr', 'werwer', 'https://picsum.photos/1920/1080', 'werwerewr', '2023/06/04', 'unconfirmed'),
-(15, 7, 'sdfgsdf', 'erweerew', 'werwr', 'werwer', 'https://picsum.photos/1920/1080', 'werwerewr', '2023/06/04', 'unconfirmed');
+(16, 6, 'Max', 'Male', 'January 5, 2018', 'Labrador Retriever', 'https://picsum.photos/1920/1080', 'Friendly and playful. Loves to fetch.', 'March 10, 2018', 'confirmed'),
+(17, 6, 'Luna', 'Female', 'April 12, 2019', 'Golden Retriever', 'https://picsum.photos/1920/1080', 'Energetic and affectionate. Enjoys long walks.', 'June 18, 2019', 'confirmed'),
+(18, 6, 'Charlie', 'Male', 'November 3, 2017', 'German Shepherd', 'https://picsum.photos/1920/1080', 'Intelligent and loyal. Excellent guard dog.', 'December 15, 2017', 'unconfirmed'),
+(19, 6, 'Bella\r\n', 'Female', 'July 8, 2020', 'Poodle', 'https://picsum.photos/1920/1080', 'Elegant and smart. Non-shedding coat.', 'September 15, 2020', 'unconfirmed'),
+(20, 7, 'Rocky\r\n', 'Male', 'March 21, 2016', 'Boxer', 'https://picsum.photos/1920/1080', 'Playful and strong. Great with kids.', 'May 2, 2016', 'confirmed'),
+(21, 7, 'Daisy\r\n', 'Female', 'February 14, 2019', 'Beagle', 'https://picsum.photos/1920/1080', 'Curious and friendly. Loves to sniff around.', 'April 1, 2019', 'confirmed'),
+(22, 7, 'Cooper\r\n', 'Male', 'September 19, 2015', 'Bulldog', 'https://picsum.photos/1920/1080', 'Easygoing and loyal. Enjoys lounging around.', 'November 5, 2015', 'unconfirmed'),
+(23, 7, 'Lucy\r\n', 'Female', 'June 10, 2017', 'Siberian Husky', 'https://picsum.photos/1920/1080', 'Playful and adventurous. Requires plenty of exercise.', 'August 2, 2017', 'unconfirmed'),
+(24, 8, 'Oliver\r\n', 'Male', 'December 2, 2021', 'French Bulldog', 'https://picsum.photos/1920/1080', 'Cute and affectionate. Enjoys cuddling.', 'January 15, 2022', 'confirmed'),
+(25, 8, 'Coco\r\n', 'Female', 'May 3, 2018', 'Shih Tzu', 'https://picsum.photos/1920/1080', 'Gentle and loving. Requires regular grooming.', 'July 10, 2018', 'confirmed'),
+(26, 8, 'Milo\r\n', 'Male', 'August 17, 2020', 'Dalmatian', 'https://picsum.photos/1920/1080', 'Playful and energetic. Has distinctive spots.', 'October 5, 2020', 'unconfirmed'),
+(27, 8, 'Lily\r\n', 'Female', 'November 28, 2019', 'Ragdoll', 'https://picsum.photos/1920/1080', 'Calm and affectionate. Known for its soft coat.', 'January 10, 2020', 'unconfirmed');
 
 --
 -- Indexes for dumped tables
@@ -131,19 +143,19 @@ ALTER TABLE `pets`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `account_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `adoptions`
 --
 ALTER TABLE `adoptions`
-  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `pets`
 --
 ALTER TABLE `pets`
-  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- Constraints for dumped tables
