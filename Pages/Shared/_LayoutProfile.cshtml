@@ -24,13 +24,13 @@
                     <img src="~/side-bar-icons/user-icon.svg" />
                     <div class="account-item">
                         <span>Sophia Krisselle</span>
-                        <button>LOGOUT</button>
+                        <button asp-page="Index">LOGOUT</button>
                     </div>
                 </div>
                 <hr>
                 <ul>
                     <li>
-                        <a href="register-new.html">
+                        <a asp-page="Account/RegisterPet">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/register-pet-icon.svg" />
                                 <span>Register new pet</span>
@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                    <a asp-page="Account/ViewUnregistered" id="clicked-page">
+                    <a asp-page="Account/ViewRegistered">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-registered-icon.svg" />
                                 <span>View registered pets</span>
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="adoption-request.html">
+                        <a asp-page="Account/ViewAdoptionRequests">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/adoption-req-icon.svg" />
                                 <span>Adoption Requests</span>
@@ -79,9 +79,9 @@
         <div class="container">
             <div class="nav-bar">
                 <ul>
-                    <li><a href="">HOME</a></li>
-                    <li><a href="">ABOUT US</a></li>
-                    <li><a href="">PRIVACY</a></li>
+                    <li><a asp-page="Index">HOME</a></li>
+                    <li><a asp-page="AboutUs">ABOUT US</a></li>
+                    <li><a asp-page="Privacy">PRIVACY</a></li>
                 </ul>
             </div>
         </div>

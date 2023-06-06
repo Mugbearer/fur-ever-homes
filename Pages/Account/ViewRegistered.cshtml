@@ -4,23 +4,45 @@
     Layout = "_LayoutProfile";
 }
 
-@foreach (Dictionary<string, string> petData in Model.dataArray)
-{
-    string petID = petData["pet_id"];
-    string name = petData["name"];
-    string description = petData["description"];
-    string imgURL = petData["image_url"];
-
-    <form class="card-container" method="post">
-        <div class="card">
-            <div class="card-img" style="background-image: url(@imgURL);"></div>
-            <h3>@name</h3>
-            <p>@description</p>
-            <input asp-for="PetCard.PetID" value="@petID" type="hidden"/>
-            <div class="btn">
-                <button type="submit">UNREGISTER</button>
-            </div>
-            
+<form class="card-container">
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button type="submit">UNREGISTER</button>
         </div>
-    </form>
-}
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button type="submit">UNREGISTER</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button type="submit">UNREGISTER</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button type="submit">UNREGISTER</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button type="submit">UNREGISTER</button>
+        </div>
+    </div>
+</form>
