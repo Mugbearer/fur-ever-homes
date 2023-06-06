@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2023 at 05:29 PM
+-- Generation Time: Jun 06, 2023 at 07:17 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -71,7 +71,8 @@ INSERT INTO `adoptions` (`adoption_id`, `pet_id`, `account_id`, `date`, `status`
 (9, 20, 8, 'March 11, 2023', 'pending'),
 (10, 21, 8, 'March 11, 2023', 'pending'),
 (11, 24, 6, 'March 11, 2023', 'pending'),
-(13, 25, 6, 'March 11, 2023', 'pending');
+(13, 25, 6, 'March 11, 2023', 'pending'),
+(15, 16, 6, '2023/06/06', 'pending');
 
 -- --------------------------------------------------------
 
@@ -97,18 +98,17 @@ CREATE TABLE `pets` (
 --
 
 INSERT INTO `pets` (`pet_id`, `account_id`, `name`, `sex`, `birthdate`, `breed`, `image_url`, `description`, `date_registered`, `status`) VALUES
-(16, 6, 'Max', 'Male', 'January 5, 2018', 'Labrador Retriever', 'https://picsum.photos/1920/1080', 'Friendly and playful. Loves to fetch.', 'March 10, 2018', 'confirmed'),
-(17, 6, 'Luna', 'Female', 'April 12, 2019', 'Golden Retriever', 'https://picsum.photos/1920/1080', 'Energetic and affectionate. Enjoys long walks.', 'June 18, 2019', 'confirmed'),
-(18, 6, 'Charlie', 'Male', 'November 3, 2017', 'German Shepherd', 'https://picsum.photos/1920/1080', 'Intelligent and loyal. Excellent guard dog.', 'December 15, 2017', 'unconfirmed'),
-(19, 6, 'Bella\r\n', 'Female', 'July 8, 2020', 'Poodle', 'https://picsum.photos/1920/1080', 'Elegant and smart. Non-shedding coat.', 'September 15, 2020', 'unconfirmed'),
-(20, 7, 'Rocky\r\n', 'Male', 'March 21, 2016', 'Boxer', 'https://picsum.photos/1920/1080', 'Playful and strong. Great with kids.', 'May 2, 2016', 'confirmed'),
-(21, 7, 'Daisy\r\n', 'Female', 'February 14, 2019', 'Beagle', 'https://picsum.photos/1920/1080', 'Curious and friendly. Loves to sniff around.', 'April 1, 2019', 'confirmed'),
-(22, 7, 'Cooper\r\n', 'Male', 'September 19, 2015', 'Bulldog', 'https://picsum.photos/1920/1080', 'Easygoing and loyal. Enjoys lounging around.', 'November 5, 2015', 'unconfirmed'),
-(23, 7, 'Lucy\r\n', 'Female', 'June 10, 2017', 'Siberian Husky', 'https://picsum.photos/1920/1080', 'Playful and adventurous. Requires plenty of exercise.', 'August 2, 2017', 'unconfirmed'),
-(24, 8, 'Oliver\r\n', 'Male', 'December 2, 2021', 'French Bulldog', 'https://picsum.photos/1920/1080', 'Cute and affectionate. Enjoys cuddling.', 'January 15, 2022', 'confirmed'),
-(25, 8, 'Coco\r\n', 'Female', 'May 3, 2018', 'Shih Tzu', 'https://picsum.photos/1920/1080', 'Gentle and loving. Requires regular grooming.', 'July 10, 2018', 'confirmed'),
-(26, 8, 'Milo\r\n', 'Male', 'August 17, 2020', 'Dalmatian', 'https://picsum.photos/1920/1080', 'Playful and energetic. Has distinctive spots.', 'October 5, 2020', 'unconfirmed'),
-(27, 8, 'Lily\r\n', 'Female', 'November 28, 2019', 'Ragdoll', 'https://picsum.photos/1920/1080', 'Calm and affectionate. Known for its soft coat.', 'January 10, 2020', 'unconfirmed');
+(16, 6, 'Max', 'Male', 'January 5, 2018', 'Labrador Retriever', 'https://i3.lensdump.com/i/6ls5zx.png', 'Friendly and playful. Loves to fetch.', 'March 10, 2018', 'confirmed'),
+(17, 6, 'Luna', 'Female', 'April 12, 2019', 'Golden Retriever', 'https://i3.lensdump.com/i/6ls5zx.png', 'Energetic and affectionate. Enjoys long walks.', 'June 18, 2019', 'confirmed'),
+(19, 6, 'Bella\r\n', 'Female', 'July 8, 2020', 'Poodle', 'https://i3.lensdump.com/i/6ls5zx.png', 'Elegant and smart. Non-shedding coat.', 'September 15, 2020', 'unconfirmed'),
+(20, 7, 'Rocky\r\n', 'Male', 'March 21, 2016', 'Boxer', 'https://i3.lensdump.com/i/6ls5zx.png', 'Playful and strong. Great with kids.', 'May 2, 2016', 'confirmed'),
+(21, 7, 'Daisy\r\n', 'Female', 'February 14, 2019', 'Beagle', 'https://i3.lensdump.com/i/6ls5zx.png', 'Curious and friendly. Loves to sniff around.', 'April 1, 2019', 'confirmed'),
+(22, 7, 'Cooper\r\n', 'Male', 'September 19, 2015', 'Bulldog', 'https://i3.lensdump.com/i/6ls5zx.png', 'Easygoing and loyal. Enjoys lounging around.', 'November 5, 2015', 'unconfirmed'),
+(23, 7, 'Lucy\r\n', 'Female', 'June 10, 2017', 'Siberian Husky', 'https://i3.lensdump.com/i/6ls5zx.png', 'Playful and adventurous. Requires plenty of exercise.', 'August 2, 2017', 'unconfirmed'),
+(24, 8, 'Oliver\r\n', 'Male', 'December 2, 2021', 'French Bulldog', 'https://i3.lensdump.com/i/6ls5zx.png', 'Cute and affectionate. Enjoys cuddling.', 'January 15, 2022', 'confirmed'),
+(25, 8, 'Coco\r\n', 'Female', 'May 3, 2018', 'Shih Tzu', 'https://i3.lensdump.com/i/6ls5zx.png', 'Gentle and loving. Requires regular grooming.', 'July 10, 2018', 'confirmed'),
+(26, 8, 'Milo\r\n', 'Male', 'August 17, 2020', 'Dalmatian', 'https://i3.lensdump.com/i/6ls5zx.png', 'Playful and energetic. Has distinctive spots.', 'October 5, 2020', 'unconfirmed'),
+(27, 8, 'Lily\r\n', 'Female', 'November 28, 2019', 'Ragdoll', 'https://i3.lensdump.com/i/6ls5zx.png', 'Calm and affectionate. Known for its soft coat.', 'January 10, 2020', 'unconfirmed');
 
 --
 -- Indexes for dumped tables
@@ -149,13 +149,13 @@ ALTER TABLE `accounts`
 -- AUTO_INCREMENT for table `adoptions`
 --
 ALTER TABLE `adoptions`
-  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `adoption_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `pets`
 --
 ALTER TABLE `pets`
-  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `pet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- Constraints for dumped tables

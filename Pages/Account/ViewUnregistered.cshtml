@@ -4,32 +4,21 @@
     Layout = "_LayoutProfile";
 }
 
-<form class="card-container">
-    <div class="card">
-        <div class="card-img car-url"></div>
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+@foreach (Dictionary<string, string> x in Model.dataArray)
+{
+    string petID = x["pet_id"];
+    string name = x["name"];
+    string imageURL = x["image_url"];
+    string description = x["description"];
+    
+    <form method="post" class="card">
+        <div class="card-img" style="background: url(@imageURL);"></div>
+        <h3>@name</h3>
+        <p>@description</p>
+        <input asp-for="PetCard.PetID" value="@petID" type="hidden" />
         <div class="btn">
-            <button id="edit-btn">EDIT</button>
-            <button id="del-btn">DELETE</button>
+            <button id="edit-btn" disabled>EDIT</button>
+            <button id="del-btn" type="submit">DELETE</button>
         </div>
-    </div>
-    <div class="card">
-        <div class="card-img car-url"></div>
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
-        <div class="btn">
-            <button id="edit-btn">EDIT</button>
-            <button id="del-btn">DELETE</button>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card-img car-url"></div>
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
-        <div class="btn">
-            <button id="edit-btn">EDIT</button>
-            <button id="del-btn">DELETE</button>
-        </div>
-    </div>
-</form>
+    </form>
+}
