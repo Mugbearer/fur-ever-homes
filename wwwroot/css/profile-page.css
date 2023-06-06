@@ -102,9 +102,8 @@ body {
     justify-content: center;
     position: static;
     display: grid;
-    grid-template-columns: repeat(3, 20vh);
+    grid-template-columns: repeat(3, 40vh);
     gap: 3vw;
-    margin-bottom: 2vh;
 }
 
 .card {
