@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Net;
 
-namespace fur_ever_homes.Pages.Account.NewFolder
+namespace fur_ever_homes.Pages.Account
 {
     public class ViewUnregisteredAdminModel : PageModel
     {

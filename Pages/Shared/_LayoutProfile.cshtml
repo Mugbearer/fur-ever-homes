@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                    <a asp-page="Account/ViewUnregistered" id="clicked-page">
+                    <a asp-page="./ViewRegistered" id="clicked-page">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-registered-icon.svg" />
                                 <span>View registered pets</span>
@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li>
-                        <a asp-page="Account/ViewUnregistered">
+                        <a asp-page="./ViewUnregistered">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-unregistered-icon.svg" />
                                 <span>View unregistered pets</span>
@@ -54,7 +54,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="adoption-request.html">
+                        <a asp-page="./ViewAdoptionRequests">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/adoption-req-icon.svg" />
                                 <span>Adoption Requests</span>
@@ -64,10 +64,18 @@
                 @if (Context.Session.GetString("IsAdmin") == "true")
                 {
                     <li>
-                        <a asp-asp-page="">
+                        <a asp-page="./ViewRegisteredAdmin">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/adoption-req-icon.svg" />
-                                <span>Adoption Requests</span>
+                                <span>View All Registered Pets</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-page="./ViewUnregisteredAdmin">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/adoption-req-icon.svg" />
+                                <span>View All Unregistered Pets</span>
                             </div>
                         </a>
                     </li>
