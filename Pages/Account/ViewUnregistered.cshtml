@@ -1,14 +1,35 @@
-﻿@page
+@page
 @model ViewUnregisteredModel
 @{
     Layout = "_LayoutProfile";
 }
 
-@foreach (Dictionary<string, string> x in Model.dataArray)
-{
-    foreach (var y in x)
-    {
-        <p>@y.Key</p>
-        <p>@y.Value</p>
-    }
-}
+<form class="card-container">
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button id="edit-btn">EDIT</button>
+            <button id="del-btn">DELETE</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button id="edit-btn">EDIT</button>
+            <button id="del-btn">DELETE</button>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-img car-url"></div>
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce rhoncus.</p>
+        <div class="btn">
+            <button id="edit-btn">EDIT</button>
+            <button id="del-btn">DELETE</button>
+        </div>
+    </div>
+</form>
