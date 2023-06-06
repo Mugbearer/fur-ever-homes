@@ -53,7 +53,7 @@ namespace fur_ever_homes.Pages
 
             HttpContext.Session.SetString("AccountID", dataArray[0]["account_id"].ToString());
             HttpContext.Session.SetString("IsAdmin", dataArray[0]["is_admin"].ToString());
-            return RedirectToPage("Account/ViewRegistered");
+            return RedirectToPage("Index");
         }
     }
 }

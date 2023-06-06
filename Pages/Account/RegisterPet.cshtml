@@ -1,46 +1,4 @@
 ﻿@page
 @model fur_ever_homes.Pages.Account.RegisterPetModel
 @{
-    Layout = "_LayoutProfile";
 }
-<div class="form-container">
-    <form method="post" class="login-form">
-        <img src="~/images/close-icon.svg" />
-        <h1>Register your <span>fur</span>-baby</h1>
-        <div class="form-group">
-            <div class="row">
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* pet name" />
-                </div>
-                <div class="column">
-                    <span>Sex</span>
-                    <div class="sex">
-                        <input type="radio" name="radio">
-                        <label class="container">Male</label>
-                        <input type="radio" name="radio">
-                        <label class="container">Female</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* birthdate" />
-                </div>
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* breed" />
-                </div>
-            </div>
-            <span class="text-validation" style="margin-top: 2%;">Error message</span>
-            <input type="text" placeholder="*description" />
-            <span class="text-validation" style="margin-top: 2%;">Error message</span>
-            <input type="text" placeholder="*image url" />
-
-            <button id="register-btn">
-                REGISTER
-            </button>
-        </div>
-    </form>
-</div>
