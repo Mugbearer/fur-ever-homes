@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/fur-ever-homes.props" />
+</Project>
