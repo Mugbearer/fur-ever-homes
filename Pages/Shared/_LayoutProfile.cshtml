@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -30,7 +30,7 @@
                 <hr>
                 <ul>
                     <li>
-                        <a href="register-new.html">
+                        <a asp-page="./RegisterPet">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/register-pet-icon.svg" />
                                 <span>Register new pet</span>
@@ -64,18 +64,10 @@
                 @if (Context.Session.GetString("IsAdmin") == "true")
                 {
                     <li>
-                        <a asp-page="./ViewRegisteredAdmin">
+                        <a asp-asp-page="">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/adoption-req-icon.svg" />
-                                <span>View All Registered Pets</span>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a asp-page="./ViewUnregisteredAdmin">
-                            <div class="side-bar-item-container">
-                                <img src="~/side-bar-icons/adoption-req-icon.svg" />
-                                <span>View All Unregistered Pets</span>
+                                <span>Adoption Requests</span>
                             </div>
                         </a>
                     </li>
