@@ -38,7 +38,7 @@
                         </a>
                     </li>
                     <li>
-                    <a asp-page="./ViewRegistered" id="clicked-page">
+                        <a asp-page="./ViewRegistered" id="clicked-page">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/view-registered-icon.svg" />
                                 <span>View registered pets</span>
@@ -64,10 +64,18 @@
                 @if (Context.Session.GetString("IsAdmin") == "true")
                 {
                     <li>
-                        <a asp-asp-page="">
+                        <a asp-page="./ViewRegisteredAdmin">
                             <div class="side-bar-item-container">
                                 <img src="~/side-bar-icons/adoption-req-icon.svg" />
-                                <span>Adoption Requests</span>
+                                <span>View all registered pets</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a asp-page="./ViewUnregisteredAdmin">
+                            <div class="side-bar-item-container">
+                                <img src="~/side-bar-icons/adoption-req-icon.svg" />
+                                <span>View all unregistered pets</span>
                             </div>
                         </a>
                     </li>
