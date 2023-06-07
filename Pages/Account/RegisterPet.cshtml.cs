@@ -1,6 +1,7 @@
 using fur_ever_homes.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics;
 using System.Net;
 using System.Text.Json;
 
@@ -24,15 +25,17 @@ namespace fur_ever_homes.Pages.Account
         {
             if (!ModelState.IsValid)
             {
+                Debug.WriteLine(ModelState);
                 return Page();
             }
 
             string uri = $"register_pet.php?accountID={HttpContext.Session.GetString("AccountID")}&name={RegisterPet.Name}&" +
                 $"sex={RegisterPet.Sex}&birthdate={RegisterPet.Birthdate}&breed={RegisterPet.Breed}&" +
-                $"imageURL{RegisterPet.ImageURL}&description={RegisterPet.Description}";
+                $"imageURL={RegisterPet.ImageURL}&description={RegisterPet.Description}";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
+            HttpWebResponse response = (HttpWebResponse)request.GetResponse();
 
-            return RedirectToPage("Index");
+            return RedirectToPage("ViewRegistered");
         }
     }
 }

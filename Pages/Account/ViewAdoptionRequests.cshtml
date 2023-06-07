@@ -3,7 +3,7 @@
 @{
     Layout = "_LayoutProfile";
 }
-<form class="card-container">
+@*<form class="card-container">
     <div class="card">
         <div class="card-img car-url"></div>
         <h3>Title</h3>
@@ -31,4 +31,23 @@
             <button id="del-btn">REJECT</button>
         </div>
     </div>
-</form>
+</form>*@
+
+@foreach (Dictionary<string, string> petData in Model.adoptionArray)
+{
+    string petID = petData["pet_id"];
+    string name = petData["name"];
+    string imageURL = petData["image_url"];
+    string description = petData["description"];
+
+    <form method="post" class="card">
+        <div class="card-img" style="background: url(@imageURL);"></div>
+        <h3>@name</h3>
+        <p>@description</p>
+        <input asp-for="PetCard.PetID" value="@petID" type="hidden" />
+        <div class="btn">
+            <button id="edit-btn" type="submit">APPROVE</button>
+            <button id="del-btn" disabled>REJECT</button>
+        </div>
+    </form>
+}

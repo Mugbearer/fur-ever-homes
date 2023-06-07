@@ -19,7 +19,7 @@ namespace fur_ever_homes.Pages.Account
                 return new BadRequestResult();
             }
 
-            dataArray = Global.GetData($"display_pets.php?accountID=all&status=unconfirmed");
+            dataArray = Global.GetData("display_pets.php?accountID=all&status=unconfirmed");
 
             return Page();
         }
@@ -29,6 +29,8 @@ namespace fur_ever_homes.Pages.Account
             string uri = $"change_pet_status.php?petID={PetCard.PetID}&status=confirmed";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
+            dataArray = Global.GetData("display_pets.php?accountID=all&status=unconfirmed");
 
             return Page();
         }

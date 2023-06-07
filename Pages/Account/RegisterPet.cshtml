@@ -3,44 +3,43 @@
 @{
     Layout = "_LayoutProfile";
 }
-<div class="form-container">
-    <form method="post" class="login-form">
-        <img src="~/images/close-icon.svg" />
-        <h1>Register your <span>fur</span>-baby</h1>
-        <div class="form-group">
-            <div class="row">
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* pet name" />
-                </div>
-                <div class="column">
-                    <span>Sex</span>
-                    <div class="sex">
-                        <input type="radio" name="radio">
-                        <label class="container">Male</label>
-                        <input type="radio" name="radio">
-                        <label class="container">Female</label>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* birthdate" />
-                </div>
-                <div class="column">
-                    <span class="text-validation">Error message</span>
-                    <input type="text" placeholder="* breed" />
-                </div>
-            </div>
-            <span class="text-validation" style="margin-top: 2%;">Error message</span>
-            <input type="text" placeholder="*description" />
-            <span class="text-validation" style="margin-top: 2%;">Error message</span>
-            <input type="text" placeholder="*image url" />
 
-            <button id="register-btn">
-                REGISTER
-            </button>
+<form method="post" class="login-form">
+    <img src="~/images/close-icon.svg" />
+    <h1>Register your <span>fur</span>-baby</h1>
+    <div class="form-group">
+        <div class="row">
+            <div class="column">
+                <span asp-validation-for="RegisterPet.Name" class="text-validation empty-space"></span>
+                <input asp-for="RegisterPet.Name" placeholder="* pet name" />
+            </div>
+            <div class="column">
+                <span>Sex</span>
+                <div class="sex">
+                    <input asp-for="RegisterPet.Sex" type="radio" value="Male" checked>
+                    <label class="container">Male</label>
+                    <input asp-for="RegisterPet.Sex" type="radio" value="Female">
+                    <label class="container">Female</label>
+                </div>
+            </div>
         </div>
-    </form>
-</div>
+        <div class="row">
+            <div class="column">
+                <span asp-validation-for="RegisterPet.Birthdate" class="text-validation empty-space"></span>
+                <input asp-for="RegisterPet.Birthdate" placeholder="* birthdate" />
+            </div>
+            <div class="column">
+                <span asp-validation-for="RegisterPet.Breed" class="text-validation empty-space"></span>
+                <input asp-for="RegisterPet.Breed" placeholder="* breed" />
+            </div>
+        </div>
+        <span asp-validation-for="RegisterPet.Name" class="text-validation empty-space" style="margin-top: 2%;"></span>
+        <input asp-for="RegisterPet.Description" placeholder="*description" />
+        <span asp-validation-for="RegisterPet.Name" class="text-validation empty-space" style="margin-top: 2%;"></span>
+        <input asp-for="RegisterPet.ImageURL" placeholder="*image url" />
+
+        <button type="submit" id="register-btn">
+            REGISTER
+        </button>
+    </div>
+</form>

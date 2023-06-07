@@ -30,6 +30,15 @@ body {
     font-size: 20px;
 }
 
+.logout, .logout:hover, .logout:focus, .logout:active, .logout:link, .logout:link {
+    text-decoration: none;
+    color: #393E46;
+}
+
+.logout{
+    display: inline;
+}
+
 .side-bar ul {
     margin-top: 10px;
 }
@@ -346,6 +355,9 @@ input, textarea {
 .text-validation {
     color: red;
     font-size: 0.7rem;
+}
+.empty-space::before {
+    content: "\00a0";
 }
 
 .login-button {

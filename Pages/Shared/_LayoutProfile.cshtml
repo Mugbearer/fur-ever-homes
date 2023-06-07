@@ -22,10 +22,12 @@
                 </div>
                 <div class="account">
                     <img src="~/side-bar-icons/user-icon.svg" />
-                    <div class="account-item">
-                        <span>Sophia Krisselle</span>
-                        <button>LOGOUT</button>
-                    </div>
+                    <form method="post" class="account-item">
+                    <span>@Context.Session.GetString("FullName")</span>
+                    <button>
+                        <a class="logout" asp-page="./Logout">LOGOUT</a>
+                    </button>
+                    </form>
                 </div>
                 <hr>
                 <ul>

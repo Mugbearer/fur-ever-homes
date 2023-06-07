@@ -31,6 +31,7 @@ namespace fur_ever_homes.Pages.Account
             string uri = "delete_pet.php?petID=" + PetCard.PetID;
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+
             dataArray = Global.GetData($"display_pets.php?accountID={HttpContext.Session.GetString("AccountID")}&status=unconfirmed");
 
             return Page();

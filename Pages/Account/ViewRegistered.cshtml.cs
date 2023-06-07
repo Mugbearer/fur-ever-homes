@@ -13,7 +13,7 @@ namespace fur_ever_homes.Pages.Account
         public Dictionary<string, string>[] dataArray;
 
         [BindProperty]
-        public PetCard PetCard { get; set; } = default!;
+        public PetCard PetCard { get; set; }
 
         public IActionResult OnGet()
         {
@@ -31,7 +31,6 @@ namespace fur_ever_homes.Pages.Account
             string uri = $"change_pet_status.php?petID={PetCard.PetID}&status=unconfirmed";
             HttpWebRequest request = (HttpWebRequest)WebRequest.Create(Global.URI + uri);
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-
 
             dataArray = Global.GetData($"display_pets.php?accountID={HttpContext.Session.GetString("AccountID")}&status=confirmed");
 
